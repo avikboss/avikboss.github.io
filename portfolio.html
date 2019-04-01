@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <script src="js/list.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/portfolio.js"></script>
+</head>
+
+<div id="header"></div>
+
+<body>
+<h3>Portfolio</h3>
+<p>
+    Below is a collection of projects of varying scales which demonstrate both theoretical knowledge of
+    computer science concepts as well as a practical ability to apply and implement those concepts.
+</p>
+<div id="portfolio">
+    <input class="search" placeholder="Search"/>
+    <br>
+    <div class="list">
+        <div class="portfolio_item">
+            <h4 class="name">Apples and Oranges</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/apples_and_oranges_screenshot.jpg">
+                </div>
+                <p>
+                    Apples and Oranges is a mobile app developed with a team of four students over the course of one
+                    semester using Ionic Framework (TypeScript, JavaScript, HTML5, CSS). It was designed for
+                    entertainment
+                    purposes, with the goal being to settle disputes or make decisions in a lighthearted way.
+                    Enter any two words, and it queries Datamuse API to gather information about the words, select a
+                    winner
+                    between the two, and present that winner in an apparently-intelligent way.<br><br>
+
+                    View the project on <a href="https://github.com/jedejong3/ThingComparer">GitHub</a>.
+
+
+                </p>
+            </div>
+        </div>
+        <div class="portfolio_item">
+            <h4 class="name">Minimum Spanning Sidewalks</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/PrimKruskal_screenshot.JPG">
+                </div>
+                <p>
+                    This is a project developed in Java with a team of three students. It is an implementation of two
+                    well-known algorithms for finding the minimum spanning tree of a graph: Prim's algorithm
+                    and Kruskal's Algorithm. We demonstrated applications of these algorithms by applying them to the
+                    sidewalks in Macalester College. Knowing the minimum spanning tree of the sidewalks could, for
+                    example,
+                    allow workers to plow the sidewalks in an efficient way so that all the campus's buildings are
+                    quickly
+                    accessible after a snowstorm. <br><br>
+
+                    View the project on <a href="https://github.com/kevin-shin/KruskalPrimAlgorithm">GitHub</a>.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio_item">
+            <h4 class="name">L-System Viewer</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/lsystem-viewer_screenshot.JPG">
+                </div>
+                <p>
+                    L-System Viewer is a project created as part of a Theory of Computation course. Written in Java in a
+                    team
+                    of two students over the course of two weeks, it employs turtle graphics to turn a text description
+                    of a
+                    Lindenmayer system into a fractal representation.<br><br>
+
+                    View the project on <a href="https://github.com/avikboss/lsystem-viewer">GitHub</a>.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio_item">
+            <h4 class="name">Finding Faces</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/find_faces_screenshot.JPG">
+                </div>
+                <p>
+                    Finding Faces is a small project developed in a group of two over the course of three weeks at
+                    Carleton
+                    College's Summer Computer Science Institute. Written in Python, it utilizes the OpenCV 2 library to
+                    identify a face in a video feed and overlay an image on top of the face in real time, similar to a
+                    primitive Snapchat filter.<br><br>
+
+                    <button onclick="hideElement('face_code')">Show/Hide Code</button>
+                </p>
+            </div>
+            <pre id="face_code" style="display: none">
+                    <code class="language-py">
+#imports----------------------------------------------------------------------------------------------------------------------
+
+import cv2
+import datetime
+
+#Global variables and startup-------------------------------------------------------------------------------------------------
+
+face_cascade = cv2.CascadeClassifier('resources\haarcascade_frontalface_default.xml')
+vidcap = cv2.VideoCapture(0)
+smallView = -1
+drawBox = 1
+mirrorImage = 1
+
+#Define functions-------------------------------------------------------------------------------------------------------------
+
+def screenshot(): # Takes a screenshot
+    timeform = "%Y-%a-%b-%d_%H-%M-%S"
+    today = datetime.datetime.today()
+    t = today.strftime(timeform)
+    cv2.imwrite('screenshots/'+t+'.png',finalImg)
+
+    print('Screenshot saved as '+t+'.png.\n')
+
+def getOverlay(overlay): # Determines which overlay to use based on user input
+    overlay = overlay.lower()
+    if overlay == 'squidward':
+        overimg = 'resources/handsomesquid.png'
+    elif overlay == 'partyhat':
+        overimg = 'resources/partyhat.png'
+    elif overlay == 'grumpy':
+        overimg = 'resources/grumpyface.png'
+    elif overlay == 'nic':
+        overimg = 'resources/cage.png'
+
+    elif overlay == 'none':
+        overimg = 'None'
+    elif overlay == 'list':
+        print('\nSquidward\nPartyhat\nGrumpy\nNic\nNone\n')
+        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options, or type "controls" to see controls.\n'))
+    elif overlay == 'controls':
+        print('\nX - Toggle Small View\nQ - Close All Windows\nS - Screenshot\nR - Select New Face Overlay\nB - Toggle Bounding Box\nF - Mirror Image\n')
+        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options, or type "controls" to see controls.\n'))
+    else:
+        print('That is not an option. No overlay selected.\n')
+        overimg = 'None'
+
+    return overimg
+
+def createMask(): # Creates a mask depending upon which image was selected in getOverlay
+
+    if overimg == 'resources/handsomesquid.png':
+        threshType = cv2.THRESH_BINARY_INV
+        tmin = 254
+        tmax = 255
+    elif overimg == 'resources/partyhat.png':
+        threshType = cv2.THRESH_BINARY
+        tmin = 10
+        tmax = 255
+    elif overimg == 'resources/grumpyface.png':
+        threshType = cv2.THRESH_BINARY
+        tmin = 20
+        tmax = 255
+    elif overimg == 'resources/cage.png':
+        threshType = cv2.THRESH_BINARY
+        tmin = 1
+        tmax = 255
+
+    rows,cols,channels = overlayImg.shape
+    roi = workImg[y:rows+y, x:cols+x]
+    overlayImggray = cv2.cvtColor(overlayImg,cv2.COLOR_BGR2GRAY)
+    ret, mask = cv2.threshold(overlayImggray, tmin, tmax, threshType)
+    mask_inv = cv2.bitwise_not(mask)
+    workImg_bg = cv2.bitwise_and(roi,roi,mask = mask_inv)
+    overlayImg_fg = cv2.bitwise_and(overlayImg,overlayImg,mask = mask)
+
+    return workImg_bg,overlayImg_fg,roi,rows,cols
+
+#MAIN LOOP--------------------------------------------------------------------------------------------------------------------
+
+overimg = getOverlay("None")
+while True:
+    # Take video, resize for face detection
+    ret,img1 = vidcap.read()
+    workImg = cv2.resize(img1,(640,360))
+    # Run face detection on grayscale video feed
+    gray = cv2.cvtColor(workImg, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    # Draw box around face if enabled, determine roi
+    for (x,y,w,h) in faces:
+        if drawBox == 1:
+            cv2.rectangle(workImg,(x,y),(x+w,y+h),(0,255,255),1)
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = workImg[y:y+h, x:x+w]
+    # Create image overlay if enabled
+    if overimg != 'None':
+        overlayImg = cv2.imread(overimg)
+        overlayImg = cv2.resize(overlayImg,(w,h))
+        workImg_bg,overlayImg_fg,roi,rows,cols = createMask()
+        dst = cv2.add(workImg_bg,overlayImg_fg)
+        workImg[y:rows+y, x:cols+x] = dst
+    # Enlarge and show image
+    finalImg = cv2.resize(workImg,(960,540))
+    if mirrorImage == 1:
+        finalImg = cv2.flip(finalImg,1)
+    cv2.imshow('Large View',finalImg)
+
+#controls and options---------------------------------------------------------------------------------------------------------
+
+    k = cv2.waitKey(1)
+    if k > -1 and chr(k) == 's': # Take screenshot
+        screenshot()
+    elif k > -1 and chr(k) == 'q': # Quit program
+        cv2.destroyAllWindows()
+        vidcap.release()
+        break
+    elif k > -1 and chr(k) == 'x': # Toggle smaller image view
+        cv2.destroyWindow('Original View')
+        smallView *= -1
+    elif k > -1 and chr(k) == 'f': # Flip image
+        mirrorImage *= -1
+    elif k > -1 and chr(k) == 'b': # Toggle box around face
+        drawBox *= -1
+    elif k > -1 and chr(k) == 'r': # Choose a new overlay
+        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options or type "controls" to see controls.\n'))
+
+    if smallView == 1:
+        cv2.imshow('Original View',workImg)
+                </code>
+                </pre>
+        </div>
+        <div class="portfolio_item">
+            <h4 class="name">To Do List</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/todo-list_screenshot.JPG">
+                </div>
+                <p>
+                    Todo List is a simple todo list program created independently in Java for the primary purpose of
+                    gaining familiarity with JavaFX and serialization. It allows you to add and remove items to the list
+                    which consist of a title, description, and date. The items on the list persist across
+                    sessions.<br><br>
+
+                    View the project on <a href="https://github.com/avikboss/todo-list">GitHub</a>.
+                </p>
+            </div>
+
+        </div>
+        <div class="portfolio_item">
+            <h4 class="name">Change Calculator</h4>
+            <div class="portfolio_content">
+                <div class="img_container">
+                    <img src="res/img/python_logo.svg">
+                </div>
+                <p>
+                    Change Calculator is a Python 3 script designed to be as simple and compact as possible which takes in some
+                    amount of money and outputs the smallest number of coins required to make that amount.<br><br>
+
+                    <button onclick="hideElement('money_code')">Show/Hide Code</button>
+                </p>
+            </div>
+            <pre id="money_code" style="display: none">
+                <code class="language-py">
+response = "y"
+while response.lower() == "y":
+    response = input("Enter an amount of money: ")
+    response = ''.join(c for c in response if c.isdigit() or c =='.')
+    response = '0'+response
+    if response.endswith('.'):
+        response += '0'
+    response = response.split('.')
+    response.append('0')
+    dollars = int(response[0])
+    cents = int(''.join(response[1:])[:2])
+    moneySplits = {"ten":dollars//10,"five":dollars%10//5,"one":dollars%10%5,"quarter":cents//25,"dime":cents%25//10,"nickel":cents%25%10//5,"penn":cents%25%10%5}
+    statement = ""
+    keylist = list(moneySplits.keys())
+    for i in range(len(keylist)):
+        statement += str(moneySplits[keylist[i]]) + ' '
+        statement += keylist[i]
+        if keylist[i] == 'penn':
+            if moneySplits[keylist[i]] == 1:
+                statement += 'y\n'
+            else:
+                statement+= 'ies\n'
+        else:
+            if moneySplits[keylist[i]] == 1:
+                statement += '\n'
+            else:
+                statement+= 's\n'
+    print(statement)
+    response = input("Enter another? (Y/N):")
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    const options = {
+        valueNames: ['name', 'portfolio_content', 'tag']
+    };
+
+    const portfolioList = new List('portfolio', options);
+</script>
+</body>
+
+<footer>
+    <div id="footer"></div>
+</footer>

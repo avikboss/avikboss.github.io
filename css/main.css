@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'zilla_slabregular';
+    src: url('webfont/zillaslab-regular-webfont.woff2') format('woff2'),
+    url('webfont/zillaslab-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #33568d;
+    --second-color: #23305b;
+    --main-font: "zilla_slabregular";
+    font-size: 1.2em;
+}
+
+body {
+    font-family: var(--main-font),serif;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+h3 {
+    color: var(--main-color);
+    font-size: 1.5em;
+    margin: auto;
+    padding-top: 1em;
+}
+
+h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+a {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--main-color);
+}
+
+
+
+
+
+

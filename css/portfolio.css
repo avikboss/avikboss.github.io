@@ -1,0 +1,92 @@
+button {
+    padding: 5px 5px 5px 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    font-family: var(--main-font), serif;
+    font-size: 0.8em;
+    color: var(--main-color);
+    background-color: white;
+}
+
+button:hover {
+    color:white;
+    background-color: var(--main-color);
+}
+
+button:active {
+    color:white;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+
+.portfolio_content {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+}
+
+.portfolio_item {
+    display: flex;
+    flex-direction: column;
+    border-left: thick solid var(--main-color);
+    margin-bottom: 15px;
+}
+
+.portfolio_content img {
+    padding-left: 2%;
+    max-width: 150px;
+    height: auto;
+}
+
+.portfolio_content .img_container {
+    min-width: 150px;
+    padding-left: 1%;
+}
+
+.portfolio_content p {
+    margin-left: 2%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.portfolio_item h4 {
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.search {
+    padding: 3px 2px 3px 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    font-family: var(--main-font), serif;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.tag_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag {
+    font-size: 10pt;
+    color: white;
+    background-color: var(--main-color);
+    max-width: min-content;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+@media only screen and (min-device-pixel-ratio: 2) {
+    .portfolio_content .img_container {
+        display: none;
+    }
+
+    .img_container img {
+        display: none;
+    }
+
+}
