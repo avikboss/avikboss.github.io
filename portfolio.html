@@ -275,15 +275,27 @@ while True:
 response = "y"
 while response.lower() == "y":
     response = input("Enter an amount of money: ")
+
+    # Sanitize input:
     response = ''.join(c for c in response if c.isdigit() or c =='.')
     response = '0'+response
     if response.endswith('.'):
         response += '0'
     response = response.split('.')
     response.append('0')
+
+    # Calculate change:
     dollars = int(response[0])
     cents = int(''.join(response[1:])[:2])
-    moneySplits = {"ten":dollars//10,"five":dollars%10//5,"one":dollars%10%5,"quarter":cents//25,"dime":cents%25//10,"nickel":cents%25%10//5,"penn":cents%25%10%5}
+    moneySplits = {"ten":dollars//10,
+                    "five":dollars%10//5,
+                    "one":dollars%10%5,
+                    "quarter":cents//25,
+                    "dime":cents%25//10,
+                    "nickel":cents%25%10//5,
+                    "penn":cents%25%10%5}
+
+    # Generate result string, with proper plurals:
     statement = ""
     keylist = list(moneySplits.keys())
     for i in range(len(keylist)):
