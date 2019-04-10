@@ -80,7 +80,7 @@ button:active {
     padding-right: 2px;
 }
 
-@media only screen and (min-device-pixel-ratio: 2) {
+@media screen and (max-device-width: 376px) {
     .portfolio_content .img_container {
         display: none;
     }
