@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>404: Page not found</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
-<body>
 
+<div id="header"></div>
+
+<body>
+<br>
+<h1>404: Page not found!</h1>
+<br>
+<p>The page you're looking for doesn't exist. If you got here from a broken link, or otherwise think that the
+    page you're looking for <i>should</i> exist, please <a href="mailto:avikbosshardt@gmail.com">let me know</a>.
+    You can use the navigation bar to get yourself back on track.
+</p>
 </body>
 </html>
