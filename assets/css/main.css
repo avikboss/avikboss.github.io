@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Zilla+Slab&display=swap');
+
+:root {
+    --main-color: #33568d;
+    --second-color: #23305b;
+    --main-font: "Raleway", sans-serif;
+    --second-font: "Zilla Slab", serif;
+    font-size: 1.2em;
+}
+
+body {
+    font-family: var(--main-font),serif;
+    background-color: white;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+h3 {
+    color: var(--main-color);
+    font-size: 1.5em;
+    margin: auto;
+    padding-top: 1em;
+    font-family: var(--second-font);
+}
+
+h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+a {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--main-color);
+}
+
+@media only screen and (min-width: 400px) {
+    body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+
+
+
+
