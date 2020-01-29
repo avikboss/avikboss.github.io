@@ -1,104 +1,82 @@
-header {
+#header-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
     font-family: var(--main-font), serif;
+    width: 100%;
+    height:fit-content;
+    background: #dfdfdf;
+    overflow: hidden;
+    border-right: thick solid var(--main-color);
 }
 
-.navbar {
+#navbar {
     background-color: var(--main-color);
-    width: 100%;
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
 }
 
 h1 {
-    color: var(--main-color);
+    color: white;
     margin: auto;
-    font-size: 3rem;
-    padding: 10px;
-    font-family: "Zilla Slab";
-}
-
-h2 {
-    color: var(--second-color);
-    font-size: 14pt;
-    margin: auto;
-    padding-bottom: 5px;
-}
-
-.email {
-    font-size: 14px;
-    color: var(--main-color);
-    margin: auto;
-    padding-top: -10%;
+    font-size: 4vw;
+    font-family: "Zilla Slab", serif;
 }
 
 ul.nav {
-    background-color: var(--main-color);
+    background-color: #dfdfdf;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 li.nav {
     padding: 10px 0px 10px 0px;
-    background: var(--main-color);
+    background: #dfdfdf;
+
 }
 
 a.nav {
-    color: white;
+    color: var(--main-color);
     padding: 10px 10px 10px 10px;
+    font-size: 3vmin;
+    display: flex;
+    align-content: center;
 }
 
 a.nav:link {
     text-decoration: none;
 }
 
-a.nav:visited {
-    text-decoration: none;
+a.nav:hover {
+    text-decoration: underline var(--main-color);
 }
 
-a.nav:hover {
-    text-decoration: none;
-    background-color: var(--second-color);
+li:hover {
+
 }
 
 a.nav:active {
     text-decoration: none;
 }
 
-p {
-    padding-top: 3px;
-    padding-bottom: 3px;
+#name_shape {
+    clip-path: polygon(0px 0px, 85% 0, 100% 100%,  0 100%);
+    shape-outside: polygon(0px 0px, 85% 0, 100% 100%,  0 100%);
+    background: var(--main-color);
+    width: auto;
+    height: fit-content;
+    padding-right: 7vw;
+    padding-left: 1vw;
+    float: left;
+    display: flex;
+    align-content: center;
 }
 
-#cv-short {
-    display: none;
-    visibility: hidden;
-}
 
-#cv-long {
-    display: inline-block;
-    visibility: visible;
-}
-
-@media screen and (max-device-width: 412px) {
-    #cv-long {
-        display: none;
-        visibility: hidden;
-    }
-
-    #cv-short {
-        display: inline-block;
-        visibility: visible;
-    }
-
-}
-
-@media screen and (min-device-width: 307px) {
-    .navbar {
-        border-radius: 10px;
-    }
-}

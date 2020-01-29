@@ -1,0 +1,31 @@
+#footer-container {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-between;
+    font-family: var(--main-font), serif;
+    color: white;
+    width: 100%;
+    height: fit-content;
+    background: #dfdfdf;
+    overflow: hidden;
+    border-left: thick solid var(--main-color);
+    margin-top: 1.5em;
+}
+
+#footer-shape {
+    clip-path: polygon(0 100%, 15% 0, 100% 0, 100% 100%);
+    shape-outside: polygon(0px 0px, 85% 0, 100% 100%, 0 100%);
+    background: var(--main-color);
+    width: fit-content;
+    height: auto;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    font-size: 3vmin;
+}
+
+.text {
+    color: var(--main-color);
+    font-size: 3vmin;
+}

@@ -1,7 +1,6 @@
 button {
     padding: 5px 5px 5px 5px;
     border: 2px solid var(--main-color);
-    border-radius: 20px;
     font-family: var(--main-font), serif;
     font-size: 0.8em;
     color: var(--main-color);
@@ -57,8 +56,10 @@ button:active {
 
 .search {
     padding: 3px 2px 3px 5px;
-    border: 2px solid var(--main-color);
-    border-radius: 20px;
+    border-bottom: 2px solid var(--main-color);
+    border-right: none;
+    border-left: none;
+    border-top: none;
     font-family: var(--main-font), serif;
     font-size: 0.8em;
     margin-bottom: 10px;

@@ -25,136 +25,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<div id="header"></div>
 
 <body>
-<h3>Portfolio</h3>
-<p>
-    Below is a collection of projects of varying scales which demonstrate both theoretical knowledge of
-    computer science concepts as well as a practical ability to apply and implement those concepts.
-</p>
-<div id="portfolio">
-    <input class="search" placeholder="Search"/>
-    <br>
-    <div class="list">
-        <div class="portfolio_item">
-            <h4 class="name">Apples and Oranges</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/apples_and_oranges_screenshot.jpg">
+<div id="page">
+    <div id="header"></div>
+
+    <div id="content">
+        <h3>Portfolio</h3>
+        <p>
+            Below is a collection of projects of varying scales which demonstrate both theoretical knowledge of
+            computer science concepts as well as a practical ability to apply and implement those concepts.
+        </p>
+        <div id="portfolio">
+            <input class="search" placeholder="Search"/>
+            <br>
+            <div class="list">
+                <div class="portfolio_item">
+                    <h4 class="name">Apples and Oranges</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/apples_and_oranges_screenshot.jpg">
+                        </div>
+                        <p>
+                            Apples and Oranges is a mobile app developed with a team of four students over the course of
+                            one
+                            semester using Ionic Framework (TypeScript, JavaScript, HTML5, CSS). It was designed for
+                            entertainment
+                            purposes, with the goal being to settle disputes or make decisions in a lighthearted way.
+                            Enter any two words, and it queries Datamuse API to gather information about the words,
+                            select a
+                            winner
+                            between the two, and present that winner in an apparently-intelligent way.<br><br>
+
+                            View the project on <a href="https://github.com/jedejong3/ThingComparer">GitHub</a>.
+
+
+                        </p>
+                    </div>
+
                 </div>
-                <p>
-                    Apples and Oranges is a mobile app developed with a team of four students over the course of one
-                    semester using Ionic Framework (TypeScript, JavaScript, HTML5, CSS). It was designed for
-                    entertainment
-                    purposes, with the goal being to settle disputes or make decisions in a lighthearted way.
-                    Enter any two words, and it queries Datamuse API to gather information about the words, select a
-                    winner
-                    between the two, and present that winner in an apparently-intelligent way.<br><br>
+                <div class="portfolio_item">
+                    <h4 class="name">Turtlebot Navigation</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/turtlebot.jpg">
+                        </div>
+                        <p>
+                            In the summer of 2019, I worked in Macalester's AI and robotics lab with two other students
+                            and a faculty mentor. Our primary task was to design, train, and integrate a convolutional
+                            neural
+                            network into an existing robot navigation system using Python, TensorFlow, and OpenCV.
+                            Over the course of 10 weeks, we achieved our goal of significant
+                            improvements in performance and accuracy. The lab's GitHub is linked below.
+                            My contributions are primarily in the main codebase catkin_ws, and compass_recorder, an
+                            Android
+                            app developed to streamline the training data collection process.<br><br>
 
-                    View the project on <a href="https://github.com/jedejong3/ThingComparer">GitHub</a>.
+                            View the project on <a href="https://github.com/foxrobotlab">GitHub</a> or read our
+                            <a href="project/turtlebot.pdf">poster</a>.
 
 
-                </p>
-            </div>
-
-        </div>
-        <div class="portfolio_item">
-            <h4 class="name">Turtlebot Navigation</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/turtlebot.jpg">
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    In the summer of 2019, I worked in Macalester's AI and robotics lab with two other students
-                    and a faculty mentor. Our primary task was to design, train, and integrate a convolutional neural
-                    network into an existing robot navigation system using Python, TensorFlow, and OpenCV. 
-                    Over the course of 10 weeks, we achieved our goal of significant
-                    improvements in performance and accuracy. The lab's GitHub is linked below.
-                    My contributions are primarily in the main codebase catkin_ws, and compass_recorder, an Android
-                    app developed to streamline the training data collection process.<br><br>
 
-                    View the project on <a href="https://github.com/foxrobotlab">GitHub</a> or read our
-                    <a href="project/turtlebot.pdf">poster</a>.
+                <div class="portfolio_item">
+                    <h4 class="name">Bebop CV</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/bebop.jpg">
+                        </div>
+                        <p>
+                            A side project in the summer 2019 Macalester AI and Robotics lab, we developed a keyboard
+                            control scheme for our Parrot Bebop drone using Python. We also experimented with various
+                            computer vision object tracking techniques including face tracking, color tracking, and
+                            qr code reading to achieve autonomous flying.<br><br>
+
+                            View the project on <a href="https://github.com/foxrobotlab/Bebop">GitHub</a>.
 
 
-                </p>
-            </div>
-        </div>
-
-        <div class="portfolio_item">
-            <h4 class="name">Bebop CV</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/bebop.jpg">
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    A side project in the summer 2019 Macalester AI and Robotics lab, we developed a keyboard
-                    control scheme for our Parrot Bebop drone using Python. We also experimented with various
-                    computer vision object tracking techniques including face tracking, color tracking, and
-                    qr code reading to achieve autonomous flying.<br><br>
 
-                    View the project on <a href="https://github.com/foxrobotlab/Bebop">GitHub</a>.
+                <div class="portfolio_item">
+                    <h4 class="name">Minimum Spanning Sidewalks</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/PrimKruskal_screenshot.JPG">
+                        </div>
+                        <p>
+                            This is a project developed in Java with a team of three students. It is an implementation
+                            of two
+                            well-known algorithms for finding the minimum spanning tree of a graph: Prim's algorithm
+                            and Kruskal's Algorithm. We demonstrated applications of these algorithms by applying them
+                            to the
+                            sidewalks in Macalester College. Knowing the minimum spanning tree of the sidewalks could,
+                            for
+                            example,
+                            allow workers to plow the sidewalks in an efficient way so that all the campus's buildings
+                            are
+                            quickly
+                            accessible after a snowstorm. <br><br>
 
-
-                </p>
-            </div>
-        </div>
-
-        <div class="portfolio_item">
-            <h4 class="name">Minimum Spanning Sidewalks</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/PrimKruskal_screenshot.JPG">
+                            View the project on <a href="https://github.com/kevin-shin/KruskalPrimAlgorithm">GitHub</a>.
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    This is a project developed in Java with a team of three students. It is an implementation of two
-                    well-known algorithms for finding the minimum spanning tree of a graph: Prim's algorithm
-                    and Kruskal's Algorithm. We demonstrated applications of these algorithms by applying them to the
-                    sidewalks in Macalester College. Knowing the minimum spanning tree of the sidewalks could, for
-                    example,
-                    allow workers to plow the sidewalks in an efficient way so that all the campus's buildings are
-                    quickly
-                    accessible after a snowstorm. <br><br>
+                <div class="portfolio_item">
+                    <h4 class="name">L-System Viewer</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/lsystem-viewer_screenshot.JPG">
+                        </div>
+                        <p>
+                            L-System Viewer is a project created as part of a Theory of Computation course. Written in
+                            Java in a
+                            team
+                            of two students over the course of two weeks, it employs turtle graphics to turn a text
+                            description
+                            of a
+                            Lindenmayer system into a fractal representation.<br><br>
 
-                    View the project on <a href="https://github.com/kevin-shin/KruskalPrimAlgorithm">GitHub</a>.
-                </p>
-            </div>
-        </div>
-        <div class="portfolio_item">
-            <h4 class="name">L-System Viewer</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/lsystem-viewer_screenshot.JPG">
+                            View the project on <a href="https://github.com/avikboss/lsystem-viewer">GitHub</a>.
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    L-System Viewer is a project created as part of a Theory of Computation course. Written in Java in a
-                    team
-                    of two students over the course of two weeks, it employs turtle graphics to turn a text description
-                    of a
-                    Lindenmayer system into a fractal representation.<br><br>
+                <div class="portfolio_item">
+                    <h4 class="name">Finding Faces</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/find_faces_screenshot.JPG">
+                        </div>
+                        <p>
+                            Finding Faces is a small project developed in a group of two over the course of three weeks
+                            at
+                            Carleton
+                            College's Summer Computer Science Institute. Written in Python, it utilizes the OpenCV 2
+                            library to
+                            identify a face in a video feed and overlay an image on top of the face in real time,
+                            similar to a
+                            primitive Snapchat filter.<br><br>
 
-                    View the project on <a href="https://github.com/avikboss/lsystem-viewer">GitHub</a>.
-                </p>
-            </div>
-        </div>
-        <div class="portfolio_item">
-            <h4 class="name">Finding Faces</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/find_faces_screenshot.JPG">
-                </div>
-                <p>
-                    Finding Faces is a small project developed in a group of two over the course of three weeks at
-                    Carleton
-                    College's Summer Computer Science Institute. Written in Python, it utilizes the OpenCV 2 library to
-                    identify a face in a video feed and overlay an image on top of the face in real time, similar to a
-                    primitive Snapchat filter.<br><br>
-
-                    <button onclick="hideElement('face_code')">Show/Hide Code</button>
-                </p>
-            </div>
-            <pre id="face_code" style="display: none">
+                            <button onclick="hideElement('face_code')">Show/Hide Code</button>
+                        </p>
+                    </div>
+                    <pre id="face_code" style="display: none">
                     <code class="language-py">
 #imports----------------------------------------------------------------------------------------------------------------------
 
@@ -285,52 +301,59 @@ while True:
         cv2.imshow('Original View',workImg)
                 </code>
                 </pre>
-        </div>
-        <div class="portfolio_item">
-            <h4 class="name">MetroTransit Analysis</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/metrotransit_img.jpg">
                 </div>
-                <p>
-                    Our final project in Intro to Data Science was a collaboration with Twin Cities MetroTransit.
-                    A group of three students used data provided by MetroTransit to explore relationships between
-                    demographics and transit ridership. The analysis was conducted in R, using a variety of packages
-                    including dplyr, tidyverse, and leaflet, among others.<br><br>
+                <div class="portfolio_item">
+                    <h4 class="name">MetroTransit Analysis</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/metrotransit_img.jpg">
+                        </div>
+                        <p>
+                            Our final project in Intro to Data Science was a collaboration with Twin Cities
+                            MetroTransit.
+                            A group of three students used data provided by MetroTransit to explore relationships
+                            between
+                            demographics and transit ridership. The analysis was conducted in R, using a variety of
+                            packages
+                            including dplyr, tidyverse, and leaflet, among others.<br><br>
 
-                    Read our analysis <a href="project/metrotransit.html">here</a>.
-                </p>
-            </div>
+                            Read our analysis <a href="project/metrotransit.html">here</a>.
+                        </p>
+                    </div>
 
-        </div>
-        <div class="portfolio_item">
-            <h4 class="name">To Do List</h4>
-            <div class="portfolio_content">
-                <div class="img_container">
-                    <img src="assets/img/todo-list_screenshot.JPG">
                 </div>
-                <p>
-                    Todo List is a simple todo list program created independently in Java for the primary purpose of
-                    gaining familiarity with JavaFX and serialization. It allows you to add and remove items to the list
-                    which consist of a title, description, and date. The items on the list persist across
-                    sessions.<br><br>
+                <div class="portfolio_item">
+                    <h4 class="name">To Do List</h4>
+                    <div class="portfolio_content">
+                        <div class="img_container">
+                            <img src="assets/img/todo-list_screenshot.JPG">
+                        </div>
+                        <p>
+                            Todo List is a simple todo list program created independently in Java for the primary
+                            purpose of
+                            gaining familiarity with JavaFX and serialization. It allows you to add and remove items to
+                            the list
+                            which consist of a title, description, and date. The items on the list persist across
+                            sessions.<br><br>
 
-                    View the project on <a href="https://github.com/avikboss/todo-list">GitHub</a>.
-                </p>
+                            View the project on <a href="https://github.com/avikboss/todo-list">GitHub</a>.
+                        </p>
+                    </div>
+
+                </div>
             </div>
-
         </div>
+        <script type="text/javascript">
+            const options = {
+                valueNames: ['name', 'portfolio_content', 'tag']
+            };
+
+            const portfolioList = new List('portfolio', options);
+        </script>
+
     </div>
-</div>
-<script type="text/javascript">
-    const options = {
-        valueNames: ['name', 'portfolio_content', 'tag']
-    };
 
-    const portfolioList = new List('portfolio', options);
-</script>
+    <div id="footer"></div>
+</div>
 </body>
 
-<footer>
-    <div id="footer"></div>
-</footer>

@@ -7,145 +7,157 @@
 
     <title>Avik Bosshardt - CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
-<script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-</script>
-<script>
-    $(function () {
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-    });
-</script>
-<div id="header"></div>
+
 
 <body>
-<p class="download">
-    Download: <a href="assets/dl/Avik_Bosshardt_CV.pdf">PDF</a> | <a href="assets/dl/Avik_Bosshardt_CV.docx">DOCX</a>
-</p>
-<p>
-<h3>Education</h3>
+<div id="page">
+    <div id="header"></div>
+    <div id="content">
+        <p class="download">
+            Download: <a href="assets/dl/Avik_Bosshardt_CV.pdf">PDF</a> | <a
+                href="assets/dl/Avik_Bosshardt_CV.docx">DOCX</a>
+        </p>
+        <p>
+        <h3>Education</h3>
 
-<div class="cv_item">
-    <h4>Macalester College, Saint Paul, MN | Sept. 2017 - May 2021 (Expected)</h4>
+        <div class="cv_item">
+            <h4>Macalester College, Saint Paul, MN | Sept. 2017 - May 2021 (Expected)</h4>
 
-    <p>
-        Bachelor’s Degree: Computer Science Major, Psychology Minor, Cognitive Science Concentration<br>
-        GPA: 3.96<br>
-    </p>
-    <ul>
-        <li><p>Relevant Coursework (Grade in Parenthesis): Database Management Systems (Currently Enrolled),
-            Computer Systems Organization (Currently Enrolled),
-            Artificial Intelligence (A),
-            Software Design/Development (A), Algorithm Design/Analysis (A), Data Science (A),
-            Theory of Computation (A), Intro to Statistical Modeling (A)</p></li>
-        <li>Awards/Honors: DeWitt Wallace Distinguished Scholarship</li>
-    </ul>
-
-</div>
-
-<div class="cv_item">
-    <h4>Atlantic Community High School, Delray Beach, FL | Aug. 2013 - May 2017</h4>
-    <p>
-        International Baccalaureate Diploma Recipient<br>
-        GPA: 3.85, Class Rank: 10/559<br>
-    </p>
-    <ul>
-        <li><p>Relevant IB/AP Exams (Score in Parenthesis): HL Mathematics (5), SL Computer Studies (6), AP Calculus AB
-            (5)</p></li>
-        <li>Awards/Honors: President’s Award for Educational Excellence</li>
-    </ul>
-</div>
-
-<h3>Language and Technology Skills</h3>
-
-<div class="cv_section">
-
-    <div class="cv_item">
-
-        <div class="cv_subitem">
-            <h4>Object Oriented Programming</h4>
+            <p>
+                Bachelor’s Degree: Computer Science Major, Psychology Minor, Cognitive Science Concentration<br>
+                GPA: 3.96<br>
+            </p>
             <ul>
-                <li>Java</li>
-                <li>Python</li>
-                <li>TypeScript</li>
+                <li><p>Relevant Coursework (Grade in Parenthesis): Database Management Systems (Currently Enrolled),
+                    Computer Systems Organization (Currently Enrolled),
+                    Artificial Intelligence (A),
+                    Software Design/Development (A), Algorithm Design/Analysis (A), Data Science (A),
+                    Theory of Computation (A), Intro to Statistical Modeling (A)</p></li>
+                <li>Awards/Honors: DeWitt Wallace Distinguished Scholarship</li>
+            </ul>
+
+        </div>
+
+        <div class="cv_item">
+            <h4>Atlantic Community High School, Delray Beach, FL | Aug. 2013 - May 2017</h4>
+            <p>
+                International Baccalaureate Diploma Recipient<br>
+                GPA: 3.85, Class Rank: 10/559<br>
+            </p>
+            <ul>
+                <li><p>Relevant IB/AP Exams (Score in Parenthesis): HL Mathematics (5), SL Computer Studies (6), AP
+                    Calculus
+                    AB
+                    (5)</p></li>
+                <li>Awards/Honors: President’s Award for Educational Excellence</li>
             </ul>
         </div>
 
-        <div class="cv_subitem">
-            <h4>Mobile Development</h4>
+        <h3>Language and Technology Skills</h3>
+
+        <div class="cv_section">
+
+            <div class="cv_item">
+
+                <div class="cv_subitem">
+                    <h4>Object Oriented Programming</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+
+                <div class="cv_subitem">
+                    <h4>Mobile Development</h4>
+                    <ul>
+                        <li>Ionic Framework</li>
+                    </ul>
+                </div>
+
+                <div class="cv_subitem">
+                    <h4>Web Development</h4>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="cv_subitem">
+                    <h4>Math, Statistics, Data Analysis</h4>
+                    <ul>
+                        <li>R</li>
+                        <li>Mathematica</li>
+                        <li>LaTeX</li>
+                        <li>Machine Learning with Python, TensorFlow, and Keras</li>
+                    </ul>
+                </div>
+
+                <div class="cv_subitem">
+                    <h4>Version Control</h4>
+                    <ul>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <h3>Work Experience</h3>
+
+        <div class="cv_item">
+            <h4>Research Assistant - <a href="https://www.macalester.edu/ilab">Macalester iLab</a> | Sept. 2018-Present
+            </h4>
             <ul>
-                <li>Ionic Framework</li>
+                <li>Work with a team of research assistants to design and run psychological eye-tracking experiments
+                </li>
+                <li>Train psychology students in the use of lab equipment</li>
+                <li>Adapt quickly to resolve unexpected issues or equipment failures during experiments</li>
+                <li>Regularly perform maintenance of lab computers</li>
             </ul>
         </div>
 
-        <div class="cv_subitem">
-            <h4>Web Development</h4>
+        <div class="cv_item">
+            <h4>Research Assistant - Macalester AI and Robotics Lab | May 2019 - July 2019</h4>
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
+                <li> Worked with students and faculty to design, train, and integrate a convolutional neural network
+                    into
+                    a robot navigation system
+                </li>
+                <li> Performed extensive refactoring to greatly streamline training data collection process</li>
+                <li>Achieved significant increases in performance and accuracy compared to the work done in past years
+                </li>
+                <li> Demonstrated self-motivation by working and problem-solving even in the absence of a faculty mentor
+                </li>
+
             </ul>
         </div>
 
-        <div class="cv_subitem">
-            <h4>Math, Statistics, Data Analysis</h4>
+        <h3>Volunteer Work</h3>
+        <div class="cv_item">
+            <h4>Counselor - Camp Invention | Jun. 2015, 2016</h4>
             <ul>
-                <li>R</li>
-                <li>Mathematica</li>
-                <li>LaTeX</li>
-                <li>Machine Learning with Python, TensorFlow, and Keras</li>
+                <li>Supervised and supported children to foster a creative environment</li>
+                <li>Collaborated closely with other counselors</li>
+                <li>Communicated with parents</li>
             </ul>
         </div>
 
-        <div class="cv_subitem">
-            <h4>Version Control</h4>
-            <ul>
-                <li>Git</li>
-            </ul>
-        </div>
     </div>
-
-</div>
-
-<h3>Work Experience</h3>
-
-<div class="cv_item">
-    <h4>Research Assistant - <a href="https://www.macalester.edu/ilab">Macalester iLab</a> | Sept. 2018-Present</h4>
-    <ul>
-        <li>Work with a team of research assistants to design and run psychological eye-tracking experiments</li>
-        <li>Train psychology students in the use of lab equipment</li>
-        <li>Adapt quickly to resolve unexpected issues or equipment failures during experiments</li>
-        <li>Regularly perform maintenance of lab computers</li>
-    </ul>
-</div>
-
-<div class="cv_item">
-    <h4>Research Assistant - Macalester AI and Robotics Lab | May 2019 - July 2019</h4>
-    <ul>
-        <li> Worked with students and faculty to design, train, and integrate a convolutional neural network into
-            a robot navigation system
-        </li>
-        <li> Performed extensive refactoring to greatly streamline training data collection process</li>
-        <li>Achieved significant increases in performance and accuracy compared to the work done in past years</li>
-        <li> Demonstrated self-motivation by working and problem-solving even in the absence of a faculty mentor</li>
-
-    </ul>
-</div>
-
-<h3>Volunteer Work</h3>
-<div class="cv_item">
-    <h4>Counselor - Camp Invention | Jun. 2015, 2016</h4>
-    <ul>
-        <li>Supervised and supported children to foster a creative environment</li>
-        <li>Collaborated closely with other counselors</li>
-        <li>Communicated with parents</li>
-    </ul>
-</div>
-
-</body>
-<footer>
     <div id="footer"></div>
-</footer>
+</div>
+</body>
 </html>
