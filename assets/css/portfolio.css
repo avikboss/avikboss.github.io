@@ -56,29 +56,11 @@ button:active {
 
 .search {
     padding: 3px 2px 3px 5px;
-    border-bottom: 2px solid var(--main-color);
-    border-right: none;
-    border-left: none;
-    border-top: none;
+    border: 2px solid var(--main-color);
     font-family: var(--main-font), serif;
     font-size: 0.8em;
     margin-bottom: 10px;
-}
-
-.tag_row {
-    display: flex;
-    flex-direction: row;
-}
-
-.tag {
-    font-size: 10pt;
-    color: white;
-    background-color: var(--main-color);
-    max-width: min-content;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-left: 2px;
-    padding-right: 2px;
+    float: right;
 }
 
 @media screen and (max-device-width: 412px) {
