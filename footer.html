@@ -10,16 +10,17 @@
             const months = ["","January","February","March","April","May","June","July","August","September",
             "October","November","December"];
             const date = json[0]["commit"]["author"]["date"];
-            document.getElementById("date").innerText =
-                `Updated ${months[parseInt(date.slice(5,7))]} ${date.slice(0,4)}`
-
+            const url = json[0]["html_url"];
+            let dateElem = document.getElementById("date");
+            dateElem.innerHTML = `Updated ${months[parseInt(date.slice(5,7))]} ${date.slice(0,4)}`;
+            dateElem.href = url;
         })();
     </script>
 </head>
 
 <div id="footer-container">
 
-    <div class="text" id="date">Checking last update...</div>
+    <div class="text"><a id="date">Checking last update...</a></div>
     <div class="text"><a href="mailto:avikbosshardt@gmail.com">avikbosshardt@gmail.com</a></div>
     <div id="footer-shape">Avik Bosshardt&nbsp</div>
 
