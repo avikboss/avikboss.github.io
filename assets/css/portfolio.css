@@ -18,6 +18,11 @@ button:active {
     border-color: var(--second-color);
 }
 
+#portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
 .portfolio_content {
     display: flex;
     flex-direction: row;
@@ -60,7 +65,7 @@ button:active {
     font-family: var(--main-font), serif;
     font-size: 0.8em;
     margin-bottom: 10px;
-    float: right;
+    align-self: flex-end;
 }
 
 @media screen and (max-device-width: 412px) {
