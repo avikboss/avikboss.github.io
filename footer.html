@@ -3,11 +3,23 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="/assets/css/footer.css"/>
+    <script type="text/javascript">
+        (async () => {
+            const response = await fetch('https://api.github.com/repos/avikboss/avikboss.github.io/commits');
+            const json = await response.json();
+            const months = ["","January","February","March","April","May","June","July","August","September",
+            "October","November","December"];
+            const date = json[0]["commit"]["author"]["date"];
+            document.getElementById("date").innerText =
+                `Updated ${months[parseInt(date.slice(5,7))]} ${date.slice(0,4)}`
+
+        })();
+    </script>
 </head>
 
 <div id="footer-container">
 
-    <div class="text">Updated January 2020</div>
+    <div class="text" id="date">Checking last update...</div>
     <div class="text"><a href="mailto:avikbosshardt@gmail.com">avikbosshardt@gmail.com</a></div>
     <div id="footer-shape">Avik Bosshardt&nbsp</div>
 
