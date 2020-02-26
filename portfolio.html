@@ -151,155 +151,23 @@
                     </div>
                 </div>
                 <div class="portfolio_item">
-                    <h4 class="name">Finding Faces</h4>
+                    <h4 class="name">Crossword Solver</h4>
                     <div class="portfolio_content">
                         <div class="img_container">
                             <img src="assets/img/find_faces_screenshot.JPG">
                         </div>
                         <p>
-                            Finding Faces is a small project developed in a group of two over the course of three weeks
-                            at
-                            Carleton
-                            College's Summer Computer Science Institute. Written in Python, it utilizes the OpenCV 2
-                            library to
-                            identify a face in a video feed and overlay an image on top of the face in real time,
-                            similar to a
-                            primitive Snapchat filter.<br><br>
+                            Crossword Solver is my senior capstone project. A collaboration with two other students, it was 
+                            developed in Python over the course of a semester. Crossword Solver gathers information from 
+                            Google search and Datamuse API (see also: my Apples and Oranges project). It takes this information
+                            and makes use of an informed depth-first search as well as other techniques from the field of AI to
+                            solve a given crossword puzzle.
+                            <br><br>
+                            View the project on <a href="https://github.com/kevin-shin/CrosswordSolver">GitHub</a>.
 
-                            <button onclick="hideElement('face_code')">Show/Hide Code</button>
+                            
                         </p>
                     </div>
-                    <pre id="face_code" style="display: none">
-                    <code class="language-py">
-#imports----------------------------------------------------------------------------------------------------------------------
-
-import cv2
-import datetime
-
-#Global variables and startup-------------------------------------------------------------------------------------------------
-
-face_cascade = cv2.CascadeClassifier('resources\haarcascade_frontalface_default.xml')
-vidcap = cv2.VideoCapture(0)
-smallView = -1
-drawBox = 1
-mirrorImage = 1
-
-#Define functions-------------------------------------------------------------------------------------------------------------
-
-def screenshot(): # Takes a screenshot
-    timeform = "%Y-%a-%b-%d_%H-%M-%S"
-    today = datetime.datetime.today()
-    t = today.strftime(timeform)
-    cv2.imwrite('screenshots/'+t+'.png',finalImg)
-
-    print('Screenshot saved as '+t+'.png.\n')
-
-def getOverlay(overlay): # Determines which overlay to use based on user input
-    overlay = overlay.lower()
-    if overlay == 'squidward':
-        overimg = 'resources/handsomesquid.png'
-    elif overlay == 'partyhat':
-        overimg = 'resources/partyhat.png'
-    elif overlay == 'grumpy':
-        overimg = 'resources/grumpyface.png'
-    elif overlay == 'nic':
-        overimg = 'resources/cage.png'
-
-    elif overlay == 'none':
-        overimg = 'None'
-    elif overlay == 'list':
-        print('\nSquidward\nPartyhat\nGrumpy\nNic\nNone\n')
-        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options, or type "controls" to see controls.\n'))
-    elif overlay == 'controls':
-        print('\nX - Toggle Small View\nQ - Close All Windows\nS - Screenshot\nR - Select New Face Overlay\nB - Toggle Bounding Box\nF - Mirror Image\n')
-        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options, or type "controls" to see controls.\n'))
-    else:
-        print('That is not an option. No overlay selected.\n')
-        overimg = 'None'
-
-    return overimg
-
-def createMask(): # Creates a mask depending upon which image was selected in getOverlay
-
-    if overimg == 'resources/handsomesquid.png':
-        threshType = cv2.THRESH_BINARY_INV
-        tmin = 254
-        tmax = 255
-    elif overimg == 'resources/partyhat.png':
-        threshType = cv2.THRESH_BINARY
-        tmin = 10
-        tmax = 255
-    elif overimg == 'resources/grumpyface.png':
-        threshType = cv2.THRESH_BINARY
-        tmin = 20
-        tmax = 255
-    elif overimg == 'resources/cage.png':
-        threshType = cv2.THRESH_BINARY
-        tmin = 1
-        tmax = 255
-
-    rows,cols,channels = overlayImg.shape
-    roi = workImg[y:rows+y, x:cols+x]
-    overlayImggray = cv2.cvtColor(overlayImg,cv2.COLOR_BGR2GRAY)
-    ret, mask = cv2.threshold(overlayImggray, tmin, tmax, threshType)
-    mask_inv = cv2.bitwise_not(mask)
-    workImg_bg = cv2.bitwise_and(roi,roi,mask = mask_inv)
-    overlayImg_fg = cv2.bitwise_and(overlayImg,overlayImg,mask = mask)
-
-    return workImg_bg,overlayImg_fg,roi,rows,cols
-
-#MAIN LOOP--------------------------------------------------------------------------------------------------------------------
-
-overimg = getOverlay("None")
-while True:
-    # Take video, resize for face detection
-    ret,img1 = vidcap.read()
-    workImg = cv2.resize(img1,(640,360))
-    # Run face detection on grayscale video feed
-    gray = cv2.cvtColor(workImg, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-    # Draw box around face if enabled, determine roi
-    for (x,y,w,h) in faces:
-        if drawBox == 1:
-            cv2.rectangle(workImg,(x,y),(x+w,y+h),(0,255,255),1)
-        roi_gray = gray[y:y+h, x:x+w]
-        roi_color = workImg[y:y+h, x:x+w]
-    # Create image overlay if enabled
-    if overimg != 'None':
-        overlayImg = cv2.imread(overimg)
-        overlayImg = cv2.resize(overlayImg,(w,h))
-        workImg_bg,overlayImg_fg,roi,rows,cols = createMask()
-        dst = cv2.add(workImg_bg,overlayImg_fg)
-        workImg[y:rows+y, x:cols+x] = dst
-    # Enlarge and show image
-    finalImg = cv2.resize(workImg,(960,540))
-    if mirrorImage == 1:
-        finalImg = cv2.flip(finalImg,1)
-    cv2.imshow('Large View',finalImg)
-
-#controls and options---------------------------------------------------------------------------------------------------------
-
-    k = cv2.waitKey(1)
-    if k > -1 and chr(k) == 's': # Take screenshot
-        screenshot()
-    elif k > -1 and chr(k) == 'q': # Quit program
-        cv2.destroyAllWindows()
-        vidcap.release()
-        break
-    elif k > -1 and chr(k) == 'x': # Toggle smaller image view
-        cv2.destroyWindow('Original View')
-        smallView *= -1
-    elif k > -1 and chr(k) == 'f': # Flip image
-        mirrorImage *= -1
-    elif k > -1 and chr(k) == 'b': # Toggle box around face
-        drawBox *= -1
-    elif k > -1 and chr(k) == 'r': # Choose a new overlay
-        overimg = getOverlay(input('Name a face overlay, type "list" for a list of options or type "controls" to see controls.\n'))
-
-    if smallView == 1:
-        cv2.imshow('Original View',workImg)
-                </code>
-                </pre>
                 </div>
                 <div class="portfolio_item">
                     <h4 class="name">MetroTransit Analysis</h4>
