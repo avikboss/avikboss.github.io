@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        table {
+            min-width: 50%;
+        }
+
+        td {
+            text-align: center;
+            width: 20%;
+            height: 100px;
+            user-select: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: "Zilla Slab";
+        }
+
+        input {
+            background-color: white;
+            border: 2px solid black;
+            width: 100%;
+            font-family: "Zilla Slab";
+        }
+
+        #opts {
+            position: fixed;
+            top: 10px;
+            left:20px;
+            max-width: 20%;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        // Fisher-Yates shuffling algorithm
+        function shuffle(array) {
+
+            var currentIndex = array.length;
+            var temporaryValue, randomIndex;
+
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+
+        };
+
+        function randSeq(min, length = 15, count = 5) {
+            arr = [...Array(length).keys()];
+            arr.forEach(function (item, index) { this[index] = item + min }, arr);
+            arr = shuffle(arr).slice(0, count);
+
+            return arr;
+        }
+
+
+
+        function generate(board_id) {
+            console.log(board_id);
+            let classes = ['b', 'i', 'n', 'g', 'o'];
+            for (let i = 0; i < 5; i++) {
+                let arr = randSeq((15 * i) + 1);
+                let squares = document.getElementsByClassName(classes[i]);
+                for (let j = 0; j < squares.length; j++) {
+                    let square = squares.item(j);
+                    if (square.innerHTML != "FREE") square.innerHTML = arr[j];
+                }
+            }
+
+            clearHighlight();
+        }
+
+        function highlight(target) {
+            if (target.style.backgroundColor == "lightblue") {
+                target.style.backgroundColor = "white";
+            } else {
+                target.style.backgroundColor = "lightblue";
+            }
+        }
+
+        function clearHighlight(board_id) {
+            let squares = document.getElementsByTagName("td");
+            let l = squares.length;
+            for (let i = 0; i < l; i++) {
+                let square = squares.item(i);
+                if (square.innerHTML != "FREE") square.style.backgroundColor = "white";
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+        </tr>
+        <tr>
+            <td onclick="highlight(this)" class='b'>1</td>
+            <td onclick="highlight(this)" class='i'>16</td>
+            <td onclick="highlight(this)" class='n'>31</td>
+            <td onclick="highlight(this)" class='g'>45</td>
+            <td onclick="highlight(this)" class='o'>61</td>
+        </tr>
+        <tr>
+            <td onclick="highlight(this)" class='b'>1</td>
+            <td onclick="highlight(this)" class='i'>16</td>
+            <td onclick="highlight(this)" class='n'>31</td>
+            <td onclick="highlight(this)" class='g'>45</td>
+            <td onclick="highlight(this)" class='o'>61</td>
+        </tr>
+        <tr>
+            <td onclick="highlight(this)" class='b'>1</td>
+            <td onclick="highlight(this)" class='i'>16</td>
+            <td class='n free' style="background-color: lightblue;">FREE</td>
+            <td onclick="highlight(this)" class='g'>45</td>
+            <td onclick="highlight(this)" class='o'>61</td>
+        </tr>
+        <tr>
+            <td onclick="highlight(this)" class='b'>1</td>
+            <td onclick="highlight(this)" class='i'>16</td>
+            <td onclick="highlight(this)" class='n'>31</td>
+            <td onclick="highlight(this)" class='g'>45</td>
+            <td onclick="highlight(this)" class='o'>61</td>
+        </tr>
+        <tr>
+            <td onclick="highlight(this)" class='b'>1</td>
+            <td onclick="highlight(this)" class='i'>16</td>
+            <td onclick="highlight(this)" class='n'>31</td>
+            <td onclick="highlight(this)" class='g'>45</td>
+            <td onclick="highlight(this)" class='o'>61</td>
+        </tr>
+    </table>
+
+    <div id="opts">
+        <input type="button" class="gen" onclick="generate()" value="Generate">
+        <input type="button" class="clr" onclick="clearHighlight()" value="Clear Board">
+    </div>
+
+    <script type="text/javascript">
+        generate();
+    </script>
+</body>
