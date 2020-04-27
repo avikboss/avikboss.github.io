@@ -63,10 +63,10 @@
 
         };
 
-        function randSeq(min, length = 15, count = 5) {
-            arr = [...Array(length).keys()];
+        function randSeq(min, range = 15, length = 5) {
+            arr = [...Array(range).keys()];
             arr.forEach(function (item, index) { this[index] = item + min }, arr);
-            arr = shuffle(arr).slice(0, count);
+            arr = shuffle(arr).slice(0, length);
 
             return arr;
         }
