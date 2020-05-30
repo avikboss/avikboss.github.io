@@ -3,6 +3,7 @@
 :root {
     --main-color: #33568d;
     --second-color: #23305b;
+    --gray-color: #dfdfdf;
     --main-font: "Raleway", sans-serif;
     --second-font: "Zilla Slab", serif;
     font-size: calc(1.2em + 0.2vmin);
@@ -31,6 +32,60 @@ body {
     padding: 0;
 }
 
+#bignav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.navblock {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5% 5% 0;
+    height: 20vw;
+    border-bottom: thick solid var(--main-color);
+    border-top: thick solid var(--main-color);
+    
+}
+
+@keyframes bignav-bg {
+    from {background-color:var(--gray-color);}
+    to {background-color: var(--main-color);}
+}
+
+@keyframes bignav-text {
+    100% {color:white}
+}
+
+.navblock:hover {
+    animation-name: bignav-bg;
+    animation-duration: 0.5s;
+    background-color: var(--main-color);
+}
+
+.navblock:hover > h5 {
+    animation-name: bignav-text;
+    animation-duration: 0.5s;
+    color:white;
+}
+
+.navblock:hover > h5 {
+    animation-name: bignav-text;
+    animation-duration: 0.5s;
+    color:white;
+}
+
+.navblock:hover > .navdesc {
+    animation-name: bignav-text;
+    animation-duration: 0.33s;
+    color:white;
+}
+
+
+
 ul {
     list-style-type: disc;
 }
@@ -48,6 +103,18 @@ h4 {
     margin-top: 0;
 }
 
+h5{
+    font-family: var(--second-font);
+    color: var(--main-color);
+    font-size: 1.3em;
+    margin: 0;
+    margin-bottom: 1%;
+}
+
+.navdesc {
+    color: black;
+}
+
 a {
     color: var(--main-color);
 }
@@ -55,6 +122,12 @@ a {
 a:visited {
     color: var(--main-color);
 }
+
+.bnavlink {
+    text-decoration: none;
+}
+
+
 
 @media screen and (max-width: 813px) {
     body, html {
