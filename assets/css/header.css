@@ -13,7 +13,7 @@
 
 #navbar {
     background-color: var(--main-color);
-    height: auto;
+    height: 100%;
     width: auto;
     display: flex;
     justify-content: center;
@@ -38,9 +38,25 @@ ul.nav {
 
 li.nav {
     padding: 10px 0px 10px 0px;
-    background: #dfdfdf;
+    background: transparent;
 
 }
+
+@keyframes navtext {
+    from {color:var(--main-color);}
+    to {color:white;}
+}
+
+@keyframes navbox {
+    from {background-color: var(--gray-color);}
+    to {background-color: var(--main-color);}
+}
+
+a:hover > li.nav {
+    animation: navtext 0.33s;
+    color:white;
+}
+
 
 a.nav {
     color: var(--main-color);
@@ -54,16 +70,14 @@ a.nav:link {
     text-decoration: none;
 }
 
-a.nav:hover {
-    text-decoration: underline var(--main-color);
-}
-
-li:hover {
-
-}
-
 a.nav:active {
     text-decoration: none;
+    
+}
+
+a.nav:hover {
+    animation: navbox 0.33s;
+    background-color: var(--main-color);
 }
 
 #name_shape {
