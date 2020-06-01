@@ -57,4 +57,15 @@
     </div>
 </body>
 
+<script type="text/javascript">
+    var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+
+    if (isIE11) {
+        document.getElementById("bignav").parentNode.removeChild(document.getElementById("bignav"));
+
+        document.getElementById("content").innerHTML += 
+        "<p style='color:red'>Looks like you're using Internet Explorer 11, which lacks support for some features used to style this website. You should consider updating your browser. " +
+        "You're still welcome to look around, but it won't look pretty.</p>"
+    }
+</script>
 </html>
