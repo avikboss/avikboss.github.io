@@ -6,7 +6,7 @@
     font-family: var(--main-font), serif;
     width: 100%;
     height:fit-content;
-    background: #dfdfdf;
+    background: var(--gray-color);
     overflow: hidden;
     border-right: thick solid var(--main-color);
 }
@@ -27,7 +27,7 @@ h1 {
 }
 
 ul.nav {
-    background-color: #dfdfdf;
+    background-color: var(--gray-color);
     list-style-type: none;
     margin: 0;
     padding: 0;
