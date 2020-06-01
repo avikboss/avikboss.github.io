@@ -6,3 +6,8 @@ function hideElement(name) {
         e.style.display = "none";
     }
 }
+
+function clearSearch() {
+    document.getElementById("search").value="";
+    portfolioList.search("");
+}
