@@ -135,7 +135,11 @@ a:visited {
     }
 }
 
-
+@media only screen and (max-device-width: 412px) {
+    .navdesc {
+        display: none;
+    }
+}
 
 
 
