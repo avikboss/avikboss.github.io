@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Zilla+Slab&display=swap');
+
+body {
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: "Zilla Slab", serif;
+}
+
+.bg-primary {
+    background-color: #33568D !important;
+}
+
+.btn-primary {
+    background-color: #33568D !important;
+}

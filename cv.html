@@ -1,167 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="stylesheet" href="/assets/css/resume.css"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets\css\overrides.css">
     <title>Avik Bosshardt - CV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-        });
-    </script>
 </head>
 
-
 <body>
-<div id="page">
-    <div id="header"></div>
-    <div id="content">
-        <p class="download">
-            Download: <a href="assets/dl/Avik_Bosshardt_CV.pdf">PDF</a> | <a
-                href="assets/dl/Avik_Bosshardt_CV.docx">DOCX</a>
-        </p>
-        <p>
-        <h3>Education</h3>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/index.html">Avik Bosshardt</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link active" href="cv.html">CV <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-        <div class="cv_item">
-            <h4>Macalester College, Saint Paul, MN | Sept. 2017 - May 2021 (Expected)</h4>
+    <div class="container">
 
-            <p>
-                Bachelor’s Degree: Computer Science Major, Psychology Minor, Cognitive Science Concentration<br>
-                GPA: 3.96<br>
-            </p>
-            <ul>
-                <li><p>Relevant Coursework (Grade in Parenthesis): 
-                    Software Testing (Currently Enrolled),
-                    Software Design/Development (A),
-                    Algorithm Design/Analysis (A),
-                    Database Management Systems (A),
-                    Computer Systems Organization (A),
-                    Artificial Intelligence (A),
-                    Statistical Machine Learning (A),
-                    Data Science (A),
-                    Theory of Computation (A)</p></li>
-                <li>Awards/Honors: DeWitt Wallace Distinguished Scholarship</li>
-            </ul>
-
+        <div class="d-flex flex-row justify-content-between mb-2 flex-wrap">
+            <h2 class="mt-2">Education</h2>
+            <div class="text-center d-flex flex-row align-items-center flex-wrap">Download:
+                <a href="assets/dl/Avik_Bosshardt_CV.pdf" class="btn btn-primary mr-2 ml-2">PDF</a>
+                <a href="assets/dl/Avik_Bosshardt_CV.docx" class="btn btn-primary">DOCX</a>
+            </div>
         </div>
 
-        <div class="cv_item">
-            <h4>Atlantic Community High School, Delray Beach, FL | Aug. 2013 - May 2017</h4>
-            <p>
-                International Baccalaureate Diploma Recipient<br>
-                GPA: 3.85, Class Rank: 10/559<br>
-            </p>
-            <ul>
-                <li><p>Relevant IB/AP Exams (Score in Parenthesis): HL Mathematics (5), SL Computer Studies (6), AP
-                    Calculus
-                    AB
-                    (5)</p></li>
-                <li>Awards/Honors: President’s Award for Educational Excellence</li>
-            </ul>
-        </div>
-
-        <h3>Language and Technology Skills</h3>
-
-        <div class="cv_section">
-
-            <div class="cv_item">
-
-                <div class="cv_subitem">
-                    <h4>Object Oriented Programming</h4>
-                    <ul>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>TypeScript</li>
-                    </ul>
-                </div>
-
-                <div class="cv_subitem">
-                    <h4>Mobile Development</h4>
-                    <ul>
-                        <li>Ionic Framework</li>
-                    </ul>
-                </div>
-
-                <div class="cv_subitem">
-                    <h4>Web Development</h4>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                    </ul>
-                </div>
-
-                <div class="cv_subitem">
-                    <h4>Math, Statistics, Data Analysis</h4>
-                    <ul>
-                        <li>R</li>
-                        <li>Mathematica</li>
-                        <li>LaTeX</li>
-                        <li>Machine Learning with Python, TensorFlow, and Keras</li>
-                    </ul>
-                </div>
-
-                <div class="cv_subitem">
-                    <h4>Version Control</h4>
-                    <ul>
-                        <li>Git</li>
-                    </ul>
-                </div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <h4 class="card-title">Macalester College | Saint Paul, MN | Sept. 2017 - May 2021</h4>
+                <h5 class="card-subtitle mb-2 text-muted">Bachelor's Degree: Computer Science Major, Psychology Minor,
+                    Cognitive Science Concentration</h5>
+                <h5 class="card-subtitle mb-2 text-muted">GPA: 3.96</h5>
+                <div class="card-text mb-2">Relevant Coursework: Software
+                    Design/Development (A), Algorithm Design/Analysis (A), Database Management Systems (A), Computer
+                    Systems Organization (A), Artificial Intelligence (A), Statistical Machine Learning (A), Data
+                    Science (A), Theory of Computation (A)</div>
+                <div class="card-text">Awards/Honors: DeWitt Wallace Distinguished Scholarship</div>
             </div>
 
         </div>
 
-        <h3>Work Experience</h3>
-
-        <div class="cv_item">
-            <h4>Research Assistant - <a href="https://www.macalester.edu/ilab">Macalester iLab</a> | Sept. 2018-Present
-            </h4>
-            <ul>
-                <li>Work with a team of research assistants to design and run psychological eye-tracking experiments
-                </li>
-                <li>Train psychology students in the use of lab equipment</li>
-                <li>Adapt quickly to resolve unexpected issues or equipment failures during experiments</li>
-                <li>Regularly perform maintenance of lab computers</li>
-            </ul>
+        <div class="card mb-2">
+            <div class="card-body">
+                <h4 class="card-title">Atlantic Community High School | Delray Beach, FL | Aug. 2013 - May 2017</h4>
+                <h5 class="card-subtitle mb-2 text-muted">
+                    International Baccalaureate Diploma Recipient</h5>
+                <h5 class="card-subtitle mb-2 text-muted">GPA: 3.85, Class Rank: 10/559</h5>
+                <div class="card-text mb-2">Relevant AP/IB Exams: HL Mathematics (5), SL Computer Studies (6), AP
+                    Calculus AB
+                    (5)</div>
+                <div class="card-text">Awards/Honors: President’s Award for Educational Excellence</div>
+            </div>
         </div>
 
-        <div class="cv_item">
-            <h4>Research Assistant - Macalester AI and Robotics Lab | May 2019 - July 2019</h4>
-            <ul>
-                <li> Worked with students and faculty to design, train, and integrate a convolutional neural network
-                    into
-                    a robot navigation system
-                </li>
-                <li> Performed extensive refactoring to greatly streamline training data collection process</li>
-                <li>Achieved significant increases in performance and accuracy compared to the work done in past years
-                </li>
-                <li> Demonstrated self-motivation by working and problem-solving even in the absence of a faculty mentor
-                </li>
+        <h2 class="mt-2">Language and Technology Skills</h2>
 
-            </ul>
+        <div class="row">
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h4 class="card-title">Object Oriented Programming</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Java</li>
+                            <li class="list-group-item">Python</li>
+                            <li class="list-group-item">TypeScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h4 class="card-title">Web Development</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">HTML5</li>
+                            <li class="list-group-item">CSS3</li>
+                            <li class="list-group-item">JavaScript</li>
+                            <li class="list-group-item">Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h4 class="card-title">Math, Stats, Data Science</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">R</li>
+                            <li class="list-group-item">Mathematica</li>
+                            <li class="list-group-item">TensorFlow</li>
+                            <li class="list-group-item">Keras</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h4 class="card-title">Mobile Development</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Ionic Framework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h4 class="card-title">Version Control</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Git</li>
+                            <li class="list-group-item">SVN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h3>Volunteer Work</h3>
-        <div class="cv_item">
-            <h4>Counselor - Camp Invention | Jun. 2015, 2016</h4>
-            <ul>
-                <li>Supervised and supported children to foster a creative environment</li>
-                <li>Collaborated closely with other counselors</li>
-                <li>Communicated with parents</li>
-            </ul>
+        <h2 class="mb-2">Work Experience</h2>
+
+        <div class="card mb-2">
+            <div class="card-body">
+                <h4 class="card-title"> Research Assistant - Macalester College iLab</h4>
+                <h5 class="card-subtitle mb-2 text-muted">Sept. 2018 - Present</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Work with a team of research assistants to design and run psychological
+                        eye-tracking experiments </li>
+                    <li class="list-group-item">Train psychology students in the use of lab equipment</li>
+                    <li class="list-group-item">Adapt quickly to resolve unexpected issues or equipment failures during
+                        experiments</li>
+                </ul>
+                <a target="_blank" href="https://macalester.edu/ilab" class="btn btn-primary">Lean about the iLab</a>
+            </div>
         </div>
 
+        <div class="card mb-2">
+            <div class="card-body">
+                <h4 class="card-title"> Software Developer Intern - Epic Systems</h4>
+                <h5 class="card-subtitle mb-2 text-muted">Jun. 2020 - Aug. 2020</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Worked on a web development project which would help patients see
+                        doctors who are in convenient locations</li>
+                    <li class="list-group-item">Conducted a rapid, highly iterative, user-centered design and
+                        development process</li>
+                </ul>
+                <a target="_blank" href="https://epic.com" class="btn btn-primary">Lean about Epic</a>
+            </div>
+        </div>
+
+        <div class="card mb-2">
+            <div class="card-body">
+                <h4 class="card-title"> Research Assistant - Macalester College AI and Robotics Lab</h4>
+                <h5 class="card-subtitle mb-2 text-muted">May 2019 - Jul. 2019</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Worked with students and faculty to design, train, and integrate a
+                        convolutional neural network into a robot navigation system </li>
+                    <li class="list-group-item">Performed extensive refactoring to greatly streamline training data
+                        collection process</li>
+                    <li class="list-group-item">Achieved significant increases in performance and accuracy compared to
+                        the work done in past years </li>
+                    <li class="list-group-item">Demonstrated self-motivation by working and problem-solving even in the
+                        absence of a faculty mentor </li>
+                </ul>
+                <a target="_blank" href="https://www.macalester.edu/mscs/studentopportunities/researchopportunities/"
+                    class="btn btn-primary">Lean about research at Macalester</a>
+            </div>
+        </div>
     </div>
-    <div id="footer"></div>
-</div>
+
+    <div class="container">
+        <nav class="navbar navbar-dark bg-primary">
+
+            <div class="navbar-nav navbar-expand-lg flex-grow-1 justify-content-between" style="flex-flow: row wrap">
+                <a class="nav-link" id="date">Last Updated: Unknown</a>
+                <a href="mailto:avikbosshardt@gmail.com" class="nav-link">avikbosshardt@gmail.com</a>
+                <span class="navbar-text">Avik Bosshardt</span>
+            </div>
+        </nav>
+        <script type="text/javascript">
+            (async () => {
+                const response = await fetch('https://api.github.com/repos/avikboss/avikboss.github.io/commits');
+                const json = await response.json();
+                const months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September",
+                    "October", "November", "December"];
+                const date = json[0]["commit"]["author"]["date"];
+                const url = json[0]["html_url"];
+                let dateElem = document.getElementById("date");
+                dateElem.innerHTML = `Updated ${months[parseInt(date.slice(5, 7))]} ${date.slice(0, 4)}`;
+                dateElem.href = url;
+                dateElem.target = "_blank";
+            })();
+        </script>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 </body>
-</html>
