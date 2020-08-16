@@ -244,20 +244,7 @@
                 <span class="navbar-text">Avik Bosshardt</span>
             </div>
         </nav>
-        <script type="text/javascript">
-            (async () => {
-                const response = await fetch('https://api.github.com/repos/avikboss/avikboss.github.io/commits');
-                const json = await response.json();
-                const months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September",
-                    "October", "November", "December"];
-                const date = json[0]["commit"]["author"]["date"];
-                const url = json[0]["html_url"];
-                let dateElem = document.getElementById("date");
-                dateElem.innerHTML = `Updated ${months[parseInt(date.slice(5, 7))]} ${date.slice(0, 4)}`;
-                dateElem.href = url;
-                dateElem.target = "_blank";
-            })();
-        </script>
+        <script src="assets/js/checkupdatedate.min.js"></script>
     </div>
 
     <!-- Optional JavaScript -->
