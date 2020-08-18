@@ -16,6 +16,17 @@
 
 <body>
 
+    <div class="alert alert-warning d-none" role="alert" id="iewarning">
+        You're using Internet Explorer 11, so some parts of this website may not display correctly. Consider switching
+        browsers.
+    </div>
+    <script type="text/javascript">
+        if (!!window.MSInputMethodContext && !!document.documentMode){
+            console.log("IE DETECTED");
+            document.getElementById("iewarning").classList.remove("d-none");
+        } 
+    </script>
+
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="/index.html">Avik Bosshardt</a>
@@ -78,7 +89,7 @@
 
     <div class="container">
         <nav class="navbar navbar-dark bg-primary">
-            
+
             <div class="navbar-nav navbar-expand-lg flex-grow-1 justify-content-between" style="flex-flow: row wrap">
                 <a class="nav-link" id="date" target="_blank">Last Updated: Unknown</a>
                 <a href="mailto:avikbosshardt@gmail.com" class="nav-link">avikbosshardt@gmail.com</a>
